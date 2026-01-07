@@ -1,0 +1,137 @@
+Creating an app
+
+Introduction
+The user interface and apps of BeamNG.drive are written using the AngularJS (1.5.8) framework.
+
+Some familiarity with the framework is useful, although not necessary. In this context, apps are just simple directives in the module beamng.apps.
+
+The 3 important parts of each app are:
+	1.An app.js file with all the code used by the app
+	2.An app.json file that contains information about the app
+	3.An app.png image file that shows up in the app selector
+
+The app.js file
+A BeamNG app directive generally follows this structure:
+
+```
+angular.module('beamng.apps')
+.directive('myApp', ['StreamsManager', function (StreamsManager) {
+  return {
+    template:  '[Some HTML Content]',
+    replace: true,
+    restrict: 'EA',
+    link: function (scope, element, attrs) {
+      // An optional list of streams that will be used in the app
+      var streamsList = [/* streams here */];
+
+      // Make the needed streams available.
+      StreamsManager.add(streamsList);
+
+      // Make sure we clean up after closing the app.
+      scope.$on('$destroy', function () {
+        StreamsManager.remove(streamsList);
+      });
+
+      scope.$on('streamsUpdate', function (event, streams) {
+        /* Some code that uses the streams' values */
+      });
+    }
+  };
+}]);
+```
+
+The example above is an example of app that uses the vehicles' streams (which is by far the most common case). However this is not always the case, the apps can be used for just about anything. Again, the code must be included in the link function of the app.js file, for example:
+
+```
+angular.module('beamng.apps')
+.directive('myApp', ['StreamsManager', function (StreamsManager) {
+  return {
+    template:  '<button ng-click="hello()">Click Me</button>',
+    replace: true,
+    restrict: 'EA',
+    link: function (scope, element, attrs) {
+      scope.hello = function () {
+        // do something here.
+      };
+    }
+  };
+}])
+```
+
+Sometimes, apps need to store some data. In this case, an extra file settings.json with this data can be added to the app folder. In order to use it, the directive must be slightly modified, like in this example:
+
+```
+angular.module('beamng.apps')
+.directive('myApp', ['StreamsManager', function (StreamsManager) {
+  return {
+    template:  '[Some HTML Content]',
+    replace: true,
+    restrict: 'EA',
+    // [1] we "require" the bngApp parent controller
+    require: '^bngApp',
+    // [2] the controller is available as 4th argument of the link function
+    link: function (scope, element, attrs, ctrl) {
+      var streamsList = ['sensors'];
+
+      StreamsManager.add(streamsList);
+
+      // [3] Use a variable to keep the settings
+      var appSettings = null;
+
+      // When DOM is ready and controllers are set up, get the stored settings.
+      element.ready(function () {
+        // [4] Call the getSettings() function of the controller
+        ctrl.getSettings()
+          .then(function (settings) {
+            appSettings = settings;
+          })
+      });
+
+      scope.$on('$destroy', function () {
+        StreamsManager.remove(streamsList);
+        // [5] Optionally save the (possibly modified) app settings when done
+        ctrl.saveSettings(appSettings);
+      });
+
+      scope.$on('streamsUpdate', function (event, streams) {
+        /* Some code that uses the streams' values */
+      });
+    }
+  };
+}])
+```
+
+The app.json file
+This file is really simple and just holds information about the app, useful for loading it. However, one must be very careful with the fields’ names, as typos or missing fields might affect the proper execution of the app. The file contents have the form:
+
+```
+{
+  "name" : "My App",
+  "author": "Me",
+  "version": "0.1",
+  "description": "Just a tutorial app",
+  "directive": "myApp",
+  "domElement": "<my-app></my-app>",
+  "css": { "width": "150px", "height": "150px", "top": "200px", "left": "200px" },
+  "preserveAspectRatio": true
+}
+```
+
+The required fields are:
+name -> The display name for the app
+author -> The authors of the app
+version -> The version number of the app
+description -> A small description of the app
+directive -> The name of the directive (the same as in the app.js file)
+domElement -> The DOM element that will actually hold the app. The domElement is determined from the directive name, and is just a conversion from camelCase to lisp-case, so in our example it would be from myApp to <my-app></my-app>
+css -> The default CSS attributes to be used when the app is first launched. These are width and height and a top/bottom, left/right property that also states the screen corner to which the app will be aligned
+
+The app.png file
+This is the image that shows up in the app selection view. Recommended size is 250x120px.
+
+Using your app
+In order to make your app visible from the game, move the folder with the app’s files to your user folder’s UI directory (<Userfolder>\ui\modules\apps).
+
+The app will then be available from the selection list. You might need to close and open the list once.
+
+Last modified: August 25, 2025

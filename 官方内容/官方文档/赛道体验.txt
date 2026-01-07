@@ -1,0 +1,38 @@
+Hotlapping
+Hotlapping is an activity you can do in freeroam mode with the help of the Hotlapping UI app. You can set up a circuit course anywhere you want, and then try to get the fastest lap time possible with the vehicle of your choice.
+
+Overview
+Here is what the app looks like, with Advanced options enabled to see all of the features:
+
+Setup
+1.Add the Hotlapping UI app to the UI layout. See this page if you need help doing so: Edit the UI . If you already have the Hotlapping UI app ready, you can ignore this step.
+2.Place your vehicle at the starting line of your imagined race, then click on Start Hotlapping. This will place a marker at your vehicle’s position.
+3.Drive along your circuit, and click on Add Checkpoint at major corners and intersections (or wherever you want). Repeat as needed.
+4.When you loop around back to your starting point, your course is complete! Pass the starting line to start your real hotlapping session! Your checkpoint and lap times will be recorded in the app.
+
+Note: There is a known bug where the app seems to reset itself after you set up the checkpoints. Don’t worry about that, just pass the next checkpoint and the race data will update itself in the app display.
+
+Advanced
+Click on the Advanced… button for more options; click on it again to hide the options.
+
+The Skip Lap button will simply skip the current lap. The lap time will be invalidated, and the next lap will start when you pass the starting line again.
+
+The Toggle Detail button will toggle between simple and detailed times in the app display.
+
+You can increase or decrease the size of all of the checkpoint markers.
+
+You can enable AI vehicles to race along the route that you created. See the next section to learn more about this feature.
+
+You can toggle the visibility of the checkpoint markers; this is great for immersion and AI races!
+
+AI Racers
+After setting up your circuit race, you can race against AI controlled vehicles! Just spawn some suitable opponent vehicles via the Vehicles menu, place them somewhere behind the starting line, switch back to your original vehicle, and then select Start AI in the app. This will activate AI for the other vehicles. Doing this will also save their starting positions, so if you select Stop AI and then Start AI again, it will automatically teleport them back to the start.
+
+When you start the AI, they will begin racing immediately. Pause the game first if you want a fair start!
+
+Advanced tip
+You can set each AI racer’s Risk level. The Hotlapping app will automatically apply a Risk value of 0.95 when the race is started for the first time. To manually control this value after the start of the race, ensure that the AI Control app is enabled, and then switch to the other vehicles by pressing TAB. Use higher values for faster AI (but with the risk of overshooting corners), or lower values for more careful AI.
+
+Note: The quality of the AI driving may be affected by the vehicle choices, the map’s road navigation layout, and the AI risk settings. In some cases, the AI may not be able to adapt to the course.
+
+Last modified: March 29, 2025
