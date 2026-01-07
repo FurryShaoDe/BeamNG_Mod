@@ -1,0 +1,25 @@
+{
+  "domElement": "<sixty-to-one-sixty></sixty-to-one-sixty>",
+  "name": "SixtyToOneSixty",
+  "types": [
+    "ui.apps.categories.vehicle_info",
+    "ui.apps.categories.debug",
+    "ui.apps.categories.vehicle_profiling"
+  ],
+  "description": "专门测量60-160km/h加速时间的专业性能计时器",
+  "css": {
+    "left": "50px",
+    "height": "400px",
+    "width": "350px",
+    "min-width": "300px",
+    "min-height": "350px",
+    "top": "50px"
+  },
+  "author": "Custom Mod Developer",
+  "version": "1.0",
+  "preserveAspectRatio": false,
+  "directive": "sixtyToOneSixty",
+  "category": "Performance",
+  "isAuxiliary": false,
+  "interactive": "yes"
+}

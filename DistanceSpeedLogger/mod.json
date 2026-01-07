@@ -1,0 +1,24 @@
+{
+  "domElement": "<distance-speed-logger></distance-speed-logger>",
+  "name": "Distance-Speed Logger",
+  "types": [
+    "ui.apps.categories.vehicle_info",
+    "ui.apps.categories.vehicle_profiling"
+  ],
+  "description": "Records and displays distance vs speed graph similar to RaceChrono Pro",
+  "css": {
+    "left": "50px",
+    "height": "400px",
+    "width": "600px",
+    "min-width": "400px",
+    "min-height": "300px",
+    "top": "50px"
+  },
+  "author": "Your Name",
+  "version": "1.0",
+  "preserveAspectRatio": false,
+  "directive": "distanceSpeedLogger",  // 确保这里是小写开头
+  "category": "Telemetry",
+  "isAuxiliary": false,
+  "interactive": "yes"
+}

@@ -1,0 +1,14 @@
+{
+  "domElement": "<sixty-to-one-sixty></sixty-to-one-sixty>",
+  "name": "SixtyToOneSixty",
+  "types": [
+    "ui.apps.categories.debug"
+  ],
+  "description": "专门测量60-160km/h加速时间的性能计时器",
+  "css": {
+    "width": "300px"
+  },
+  "author": "Custom Mod",
+  "version": "1.0",
+  "directive": "sixtyToOneSixty"
+}
