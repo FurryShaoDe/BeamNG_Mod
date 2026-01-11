@@ -94,8 +94,4 @@ M.onExtensionLoaded = function() ... end   -- called when the extension is loade
 
 There’s no centralized list with those special functions and variables; the source code IS the documentation(tm). For example, you may research the code inside lua/ge/main.lua, lua/common/extensions.lua, etc. See who’s calling extension hooks, or observe how other extensions have been written, etc.
 
-##### Programming documentation feedback
-
-*If you feel this **programming documentation** is too high level, too low level, is missing important topics, is erroneous anywhere, etc, please write a [post at this thread](https://www.beamng.com/threads/new-beamng-drive-documentation.77939/) and ping me personally by typing `@stenyak` so I will get notified.*
-
 Last modified: January 24, 2025
