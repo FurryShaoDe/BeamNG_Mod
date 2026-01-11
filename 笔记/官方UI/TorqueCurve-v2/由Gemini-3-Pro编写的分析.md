@@ -11,7 +11,6 @@
     - Canvas 层：双层 Canvas 叠加（`staticCanvas` 用于绘制背景和曲线，`dynamicCanvas` 用于绘制实时 RPM 指针）。
         
     - 数据面板：基于 `scope.config` 的动态表格，显示当前扭矩/功率数值。
-        
 
 ## 2. 数据流与生命周期
 
@@ -22,7 +21,6 @@
 2. **Lua 请求**: 调用 `bngApi.activeObjectLua('controller.mainController.sendTorqueData()')` 主动请求车辆数据。
     
 3. **车辆变更**: 监听 `VehicleChange` 和 `VehicleFocusChanged` 以重置状态或重新请求数据。
-    
 
 ### 静态数据 (曲线图)
 
@@ -37,7 +35,6 @@
     3. 通过 `updateScopeData()` 将原始数据转换为视图数据（应用 `UiUnits` 单位转换）。
         
     4. 存储至 `scope.config`，用于 DOM 绑定和绘图。
-        
 
 ### 实时数据 (RPM 指针)
 
@@ -52,7 +49,6 @@
     2. 在 `dynamicCanvas` 上绘制垂直橙色线条。
         
     3. 更新 `scope.config` 中的实时数值（`val`）。
-        
 
 ## 3. 核心渲染机制
 
@@ -71,14 +67,12 @@
     3. 绘制网格和坐标轴。
         
     4. 遍历 `scope.config` 绘制每一条可见的扭矩/功率曲线。
-        
 
 ### 动态图层 (Inside `streamsUpdate`)
 
 - **频率**: 每帧（取决于流更新频率）。
     
 - **逻辑**: 清空画布 -> 绘制当前 RPM 线 -> 触发 Angular 脏检查更新数值文本。
-    
 
 ## 4. 关键变量与状态
 
@@ -87,35 +81,3 @@
 - `currentVehicle`: 缓存当前车辆 ID 和引擎列表，防止重复处理。
     
 - `maxRpm`:以此为基准计算 X 轴缩放比例。
-    
-
-## 5. Mod 开发切入点 (Hooks)
-
-### A. UI/视觉重构
-
-- **覆盖 `template`**: 可以完全重写 HTML 结构（例如改用 SVG 替代 Canvas，或改变布局）。
-    
-- **替换 `CanvasShortcuts`**: 官方绘图服务较为简陋，可在 `plotStaticGraphs` 中改用 D3.js, Chart.js 或自定义 WebGL 逻辑。
-    
-
-### B. 数据逻辑扩展
-
-- **拦截 `TorqueCurveChanged`**: 在调用 `updateScopeData` 之前修改 `data`。
-    
-    - _用途_: 添加自定义计算曲线（如轮上扭矩估算）、平滑数据或合并多引擎数据。
-        
-- **扩展 `scope.config`**:
-    
-    - _用途_: 在表格中显示额外参数（如涡轮压力、进气温度），需同时监听对应的 Streams。
-        
-
-### C. 交互增强
-
-- **Hook `onEngineSelection`**:
-    
-    - _用途_: 实现多引擎对比功能（当前逻辑互斥，一次只选一个）。
-        
-- **Hook `streamsUpdate`**:
-    
-    - _用途_: 增加换挡提示光、峰值保持（Peak Hold）或历史轨迹回放。
-        
