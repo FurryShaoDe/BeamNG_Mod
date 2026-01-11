@@ -1,0 +1,17 @@
+As a modder, at some point you might want to create advanced functionality for your mod. This functionality might extend beyond what’s offered in BeamNG software by default, and will require you to write custom programming code. Typically you’ll want to use Lua code for gameplay, or HTML/JS code for the user interface.
+
+**The goal here is to provide some general guidance**, explaining overall concepts and architecture choices that are specific to BeamNG.
+
+This means that:
+
+- A detailed API documentation is outside the scope of this documentation.
+- Tutorials about how to learn programming, web development, etc is outside the scope of this documentation. There’s plenty of better sources of education on the Internet, and we advise you to start there if you are not already a programmer.
+
+For any BeamNG-specific information that you cannot find in this documentation, such as detailed API use, etc, it’s best to either:
+
+- a) Search the existing code and use it as a vague reference
+- b) Ask for beamng-specific programming help at our [programming forums](https://www.beamng.com/forums/programming.28/).
+
+**Please check the index below to continue reading more programming documentation:**
+
+Last modified: October 4, 2024
