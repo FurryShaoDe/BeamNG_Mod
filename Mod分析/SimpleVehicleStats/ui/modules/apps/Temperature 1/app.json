@@ -1,0 +1,19 @@
+{
+  "name": "= Temperature - Fluids 1",
+  "types": [
+    "ui.apps.categories.vehicle_info"
+  ],
+  "description": "Simple temperature display #1 - Coolant Temp +  Oil Temp + Rad Fan Indicator (Dot next to water temp when fan's on))",
+  "css": {
+    "top": "500px",
+    "left": "500px",
+    "height": "40px",
+    "width": "110px",
+    "min-height": "40px",
+    "min-width": "110px"
+  },
+  "author": "AstonishingA",
+  "version": "1.0",
+  "directive": "tempfluids1",
+  "domElement": "<tempfluids1></tempfluids1>"
+}

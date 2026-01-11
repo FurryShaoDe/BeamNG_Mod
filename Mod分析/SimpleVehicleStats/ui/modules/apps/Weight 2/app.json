@@ -1,0 +1,19 @@
+{
+  "name": "= SVS Weight - Live #2",
+  "types": [
+    "ui.apps.categories.vehicle_info"
+  ],
+  "description": "Detailed live weight display #2 - live total weight + front/rear weights + distribution %",
+  "css": {
+    "top": "500px",
+    "left": "500px",
+    "height": "80px",
+    "width": "230px",
+    "min-width": "180px",
+    "min-height": "80px"
+  },
+  "author": "AstonishingA",
+  "version": "1.0",
+  "directive": "weight2",
+  "domElement": "<weight2></weight2>"
+}

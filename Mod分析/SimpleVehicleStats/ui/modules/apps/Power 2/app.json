@@ -1,0 +1,19 @@
+{
+  "name": "= SVS Power - Power #2",
+  "types": [
+    "ui.apps.categories.vehicle_info"
+  ],
+  "description": "Simple power display #2 - Power, Torque and  Power to Weight Ratio. (HP / NM / KG)",
+  "css": {
+    "top": "500px",
+    "left": "500px",
+    "height": "80px",
+    "width": "110px",
+    "min-height": "80px",
+    "min-width": "110px"
+  },
+  "author": "AstonishingA",
+  "version": "1.0",
+  "directive": "power2",
+  "domElement": "<power2></power2>"
+}

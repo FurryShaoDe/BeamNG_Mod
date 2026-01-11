@@ -1,0 +1,20 @@
+{
+  "name": "= SVS Settings",
+  "types": [
+    "ui.apps.categories.vehicle_info"
+  ],
+  "description": "Simple Vehicle Stats settings panel - Click the grey gear in the bottom right of screen to open settings - Place window anywhere on screen, it doesnt matter",
+
+  "css": {
+    "top": "500px",
+    "left": "500px",
+    "height": "110px",
+      "width": "100px",
+      "min-height": "110px",
+    "min-width": "100px"
+  },
+  "author": "AstonishingA",
+  "version": "1.0",
+  "directive": "svssettings",
+  "domElement": "<svssettings></svssettings>"
+}
