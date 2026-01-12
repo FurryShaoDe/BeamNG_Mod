@@ -121,61 +121,15 @@ This file is really simple and just holds information about the app, useful for 
 
 The required fields are:
 
-Field
-
-**name**
-
-Description
-
-The display name for the app
-
-Field
-
-**author**
-
-Description
-
-The authors of the app
-
-Field
-
-**version**
-
-Description
-
-The version number of the app
-
-Field
-
-**description**
-
-Description
-
-A small description of the app
-
-Field
-
-**directive**
-
-Description
-
-The name of the directive (the same as in the app.js file)
-
-Field
-
-**domElement**
-
-Description
-
-The DOM element that will actually hold the app. The domElement is determined from the directive name, and is just a conversion from *camelCase* to *lisp-case*, so in our example it would be from `myApp` to `<my-app></my-app>`
-
-Field
-
-**css**
-
-Description
-
-The default CSS attributes to be used when the app is first launched. These are width and height and a top/bottom, left/right property that also states the screen corner to which the app will be aligned
+|      Field      |                                                                                                            Description                                                                                                             |
+| :-------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|    **name**     |                                                                                                    The display name for the app                                                                                                    |
+|   **author**    |                                                                                                       The authors of the app                                                                                                       |
+|   **version**   |                                                                                                   The version number of the app                                                                                                    |
+| **description** |                                                                                                   A small description of the app                                                                                                   |
+|  **directive**  |                                                                                     The name of the directive (the same as in the app.js file)                                                                                     |
+| **domElement**  | The DOM element that will actually hold the app. The domElement is determined from the directive name, and is just a conversion from *camelCase* to *lisp-case*, so in our example it would be from `myApp` to `<my-app></my-app>` |
+|     **css**     |             The default CSS attributes to be used when the app is first launched. These are width and height and a top/bottom, left/right property that also states the screen corner to which the app will be aligned             |
 
 #### The app.png file
 
