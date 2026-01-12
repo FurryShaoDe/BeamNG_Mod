@@ -131,7 +131,7 @@ Please follow the product manual for your hardware / motion sim platform / digit
 
 ### I’m a manufacturer and want to implement my own protocol
 
-**For programmers/manufacturers only**: if you need assistance to integrate your hardware or software with BeamNG, you can [reach us via email](https://documentation.beamng.com/modding/protocols/).
+**For programmers/manufacturers only**: if you need assistance to integrate your hardware or software with BeamNG, you can reach us via email.
 
 If you are a programmer from a hardware or software manufacturer, you may want to access more information than that offered by the default protocols described above.
 
@@ -156,7 +156,7 @@ So if you build a few products that require a different protocol each, that’s 
 
 During development of your protocol, you can follow these steps:
 
-- 1 Open the [**User folder**](https://documentation.beamng.com/support/userfolder).
+- 1 Open the **[User folder](../Support/Userfolder.md)**.
 - 2 Inside the User folder, create a folder called `USER_FOLDER/mods/unpacked/my_protocol_name/lua/vehicle/protocols/` (replace `my_protocol_name` with the **unique name** you decided in the previous section).
 - 3 Inside that folder, create a `.LUA` file for your custom protocol. For example, `USER_FOLDER/mods/unpacked/my_protocol_name/lua/vehicle/protocols/my_protocol_name.lua` (replace `my_protocol_name` with the **unique name** you decided in the previous section).
 	- *You may want to use one of our official protocol files as reference - they are located in `PROGRAM_INSTALL_FOLDER/lua/vehicle/protocols/*.lua`, and are distributed under a permissive open source bCDDL license. You are free to copy-paste-modify our protocols and redistribute the result under bCDDL (or any compatible license).*
@@ -197,7 +197,7 @@ You can distribute this ZIP file to end-users in several ways:
 
 - **Recommended**: [upload it to the official BeamNG mod repository](https://www.beamng.com/resources/add). Users can easily search your protocol in the built-in `Mods` menu, and install it with a single click. More information [here](https://www.beamng.com/threads/uploading-mods-to-the-repository.16555).
 - Alternative: you may distribute the `.ZIP` file yourself (for example, using your own web server, or included together with your software package, etc):
-	- If you want to automate the install, your software needs to locate the [**User folder**](https://documentation.beamng.com/support/userfolder), and copy the.ZIP file as-is inside `USER_FOLDER/mods/`. Do **not** extract the ZIP file, instead, simply copy the ZIP file into that folder. For example `USER_FOLDER/mods/my_protocol_name.zip`.
+	- If you want to automate the install, your software needs to locate the **[User folder](../Support/Userfolder.md)**, and copy the.ZIP file as-is inside `USER_FOLDER/mods/`. Do **not** extract the ZIP file, instead, simply copy the ZIP file into that folder. For example `USER_FOLDER/mods/my_protocol_name.zip`.
 	- If you want the install to be performed manually by end-users, you will want to include the following link in your product manual: `https://go.beamng.com/installing-mods-manually`. The benefit of providing the link is: a) the link is guaranteed to continue working in the future, and b) if we change the ZIP install procedure in the future, that page will always contain the latest instructions.
 
 Last modified: January 24, 2025

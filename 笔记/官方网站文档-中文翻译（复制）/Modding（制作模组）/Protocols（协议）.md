@@ -132,7 +132,7 @@ typedef struct xxx  {
 
 ### 我是制造商，想实现自己的协议
 
-**仅限程序员/制造商**：如果您需要帮助将硬件或软件与 BeamNG 集成，可以 [通过电子邮件联系我们](https://documentation.beamng.com/modding/protocols/)。
+**仅限程序员/制造商**：如果您需要帮助将硬件或软件与 BeamNG 集成，可以通过电子邮件联系我们。
 
 如果您是来自硬件或软件制造商的程序员，您可能希望访问比上述默认协议提供的更多信息。
 
@@ -157,7 +157,7 @@ typedef struct xxx  {
 
 在开发您的协议期间，您可以遵循以下步骤：
 
-- 1 打开 **[用户文件夹 (User folder)](https://documentation.beamng.com/support/userfolder)**。
+- 1 打开 **[用户文件夹 (User folder)](../Support（支持）/Userfolder（用户文件夹）.md)**。
 - 2 在用户文件夹内，创建一个名为 `USER_FOLDER/mods/unpacked/my_protocol_name/lua/vehicle/protocols/` 的文件夹（将 `my_protocol_name` 替换为您在上一节中确定的**唯一名称**）。
 - 3 在该文件夹内，为您的自定义协议创建一个 `.LUA` 文件。例如，`USER_FOLDER/mods/unpacked/my_protocol_name/lua/vehicle/protocols/my_protocol_name.lua`（将 `my_protocol_name` 替换为您在上一节中确定的**唯一名称**）。
 	- *您可能希望使用我们的官方协议文件作为参考 - 它们位于 `PROGRAM_INSTALL_FOLDER/lua/vehicle/protocols/*.lua`，并根据宽松的开源 bCDDL 许可证分发。您可以自由复制-粘贴-修改我们的协议，并根据 bCDDL（或任何兼容许可证）重新分发结果。*
@@ -198,7 +198,7 @@ typedef struct xxx  {
 
 - **推荐**：[上传到官方 BeamNG 模组仓库](https://www.beamng.com/resources/add)。用户可以在内置的 `Mods` 菜单中轻松搜索您的协议，并一键安装。更多信息请点击 [这里](https://www.beamng.com/threads/uploading-mods-to-the-repository.16555)。
 - 替代方案：您可以自行分发 `.ZIP` 文件（例如，使用您自己的网络服务器，或包含在您的软件包中等）：
-	- 如果您想自动安装，您的软件需要定位 **[用户文件夹](https://documentation.beamng.com/support/userfolder)**，并将 .ZIP 文件按原样复制到 `USER_FOLDER/mods/` 中。**不要**解压 ZIP 文件，只需将 ZIP 文件复制到该文件夹中即可。例如 `USER_FOLDER/mods/my_protocol_name.zip`。
+	- 如果您想自动安装，您的软件需要定位 **[用户文件夹 (User folder)](../Support（支持）/Userfolder（用户文件夹）.md)**，并将 .ZIP 文件按原样复制到 `USER_FOLDER/mods/` 中。**不要**解压 ZIP 文件，只需将 ZIP 文件复制到该文件夹中即可。例如 `USER_FOLDER/mods/my_protocol_name.zip`。
 	- 如果您希望最终用户手动执行安装，您需要在产品手册中包含以下链接：`https://go.beamng.com/installing-mods-manually`。提供链接的好处是：a) 该链接保证在未来继续有效，b) 如果我们在未来更改 ZIP 安装程序，该页面将始终包含最新说明。
 
 最后修改时间：2025 年 1 月 24 日
