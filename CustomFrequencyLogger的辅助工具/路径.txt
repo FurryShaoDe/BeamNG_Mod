@@ -1,0 +1,3 @@
+C:\Users\你的用户名\AppData\Local\BeamNG\BeamNG.drive\current\CustomLog
+
+请将analyze_vsl.py放在该文件夹下
