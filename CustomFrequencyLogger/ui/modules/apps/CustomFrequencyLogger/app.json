@@ -1,0 +1,20 @@
+{
+  "domElement": "<customfrequencylogger></customfrequencylogger>",
+  "name": "Custom Frequency Logger",
+  "types": [
+    "ui.apps.categories.utility"
+  ],
+  "description": "Modified logger that supports 10Hz (0.1s) update rate.",
+  "css": {
+    "left": "200px",
+    "height": "550px",
+    "top": "200px",
+    "width": "400px"
+  },
+  "author": "BeamNG (Modified)",
+  "version": "1.0",
+  "preserveAspectRatio": false,
+  "directive": "customfrequencylogger",
+  "category": "Debug",
+  "isAuxiliary": false
+}

@@ -1,0 +1,7 @@
+{
+  "name": "CustomFrequencyLogger",
+  "author": "User",
+  "version": "1.0",
+  "modType": "app",
+  "description": "Vehicle Stats Logger with 10Hz frequency support."
+}
